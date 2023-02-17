@@ -15,7 +15,7 @@
     <div class="container-fluid">
       <a class="navbar-brand"><span class="fw-bold">Interactive</span> <br>
         Geometry Genius</a>
-        <a href="window.location.href = 'blog.html'"><button class= "bg-primary border-0 text-white rounded-1 px-3">Blog</button></a>
+        <button onclick="myFunction()" class= "bg-primary border-0 text-white rounded-1 px-3">Blog</button></a>
     </div>
   </nav>
  </header>
@@ -28,9 +28,9 @@
         <div class="card-body text-center">
           <h3 class="card-title mx-auto text-center">Triangle</h3>
           <p>Area (A) = 0.5 b h</p>
-          <input class="w-25" type="text" value="b"> Cm
-          <input class="w-25" type="text" value="h"> <br>
-          <button id="btn-calculate-tri" class="mt-4 w-75 bg-primary border-0 text-white rounded-1">Calculate</button>
+          <input id="input-field-tri-first" class="w-25" type="text" value="b"> Cm
+          <input id="input-field-tri-second" class="w-25" type="text" value="h"> Cm <br>
+          <button   id="btn-calculate-tri" class="mt-4 w-75 bg-primary border-0 text-white rounded-1">Calculate</button>
          
         </div>
       </div>
@@ -40,30 +40,35 @@
         <img src="images/rectangle.png" class="card-img-top w-75 mx-auto pt-3" alt="...">
         <div class="card-body text-center">
           <h3 class="card-title mx-auto text-center">Rectangle</h3>
-          <p>Area (A) = 0.5 b h</p>
-          <input class="w-25" type="text" value="b"> Cm
-          <input class="w-25" type="text" value="h"> <br>
-          <button class="mt-4 w-75 bg-primary border-0 text-white rounded-1">Calculate</button>
+          <p>Area (A) =w x l</p>
+          <input id="input-field-rect-first" class="w-25" type="text" value="w"> Cm
+          <input id="input-field-rect-second" class="w-25" type="text" value="l"> Cm <br>
+          <button id="btn-calculate-rect" class="mt-4 w-75 bg-primary border-0 text-white rounded-1">Calculate</button>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card">
+      <div class="card ">
         <img src="images/parallelogram.png" class="card-img-top w-75 mx-auto pt-3" alt="...">
         <div class="card-body text-center">
           <h3 class="card-title mx-auto text-center">parallelogram</h3>
-          <p>Area (A) = 0.5 b h</p>
+          <p>Area (A) = b h</p>
           <input class="w-25" type="text" value="b"> Cm
-          <input class="w-25" type="text" value="h"> <br>
+          <input class="w-25" type="text" value="h"> Cm <br>
           <button class="mt-4 w-75 bg-primary border-0 text-white rounded-1">Calculate</button>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card">
-        <div class="card-body text-center">
-          <h3 class="card-title">Area Calculation</h3>
-          <p>1. Triangle</p>
+        <div class="card-body">
+          <h3 class="card-title text-center">Area Calculation</h3>
+          <p>1. Triangle     = <span id="triangle-text-field">00</span>cm2</p>
+          <p>2. Rectangle    = <span id="rectangle-text-field">00</span>cm2</p>
+          <p>3. Parallelogram= <span id="parallelogram-text-field">00</span>cm2</p>
+          <p>4. Rhombus      = <span id="rhombus-text-field">00</span>cm2</p>
+          <p>5. Pentagon     = <span id="pentagon-text-field">00</span>cm2</p>
+          <p>6. ellipse      = <span id="ellipse-text-field">00</span>cm2</p>
         </div>
       </div>
     </div>
@@ -73,9 +78,9 @@
         <img src="images/rhombus.png" class="card-img-top w-50 mx-auto pt-3" alt="...">
         <div class="card-body text-center">
           <h3 class="card-title mx-auto text-center">Rhombus</h3>
-          <p>Area (A) = 0.5 b h</p>
-          <input class="w-25" type="text" value="b"> Cm
-          <input class="w-25" type="text" value="h"> <br>
+          <p>Area (A) = 0.5 d1 x d2</p>
+          <input class="w-25" type="text" value="d1"> Cm
+          <input class="w-25" type="text" value="d2"> Cm <br>
           <button class="mt-4 w-75 bg-primary border-0 text-white rounded-1">Calculate</button>
         </div>
       </div>
@@ -87,9 +92,9 @@
         <img src="images/pentagon.png" class="card-img-top w-50 mx-auto pt-3" alt="...">
         <div class="card-body text-center">
           <h3 class="card-title mx-auto text-center">Pentagon</h3>
-          <p>Area (A) = 0.5 b h</p>
-          <input class="w-25" type="text" value="b"> Cm
-          <input class="w-25" type="text" value="h"> <br>
+          <p>Area (A) = 0.5 p b</p>
+          <input class="w-25" type="text" value="p"> Cm
+          <input class="w-25" type="text" value="b"> Cm <br>
           <button class="mt-4 w-75 bg-primary border-0 text-white rounded-1">Calculate</button>
         </div>
       </div>
@@ -101,9 +106,9 @@
         <img src="images/ellipse.png" class="card-img-top w-75 mx-auto pt-3" alt="...">
         <div class="card-body text-center">
           <h3 class="card-title mx-auto text-center">Ellipse</h3>
-          <p>Area (A) = 0.5 b h</p>
-          <input class="w-25" type="text" value="b"> Cm
-          <input class="w-25" type="text" value="h"> <br>
+          <p>Area (A) =  ab</p>
+          <input class="w-25" type="text" value="a"> Cm
+          <input class="w-25" type="text" value="b"> <br>
           <button class="mt-4 w-75 bg-primary border-0 text-white rounded-1">Calculate</button>
         </div>
       </div>
@@ -119,6 +124,13 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
     <script src="js/program1.js"></script>
+    <script>
+      function myFunction() {
+        window.location.href = "blog.html";
+      }
+      </script>
+      <script src="js/program2.js"></script>
+    
 </body>
 
 </html>|
