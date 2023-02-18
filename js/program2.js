@@ -13,7 +13,7 @@ document.getElementById('btn-calculate-rect').addEventListener('click', function
     }
 // step 4
     // Calculate the total value
-    const rectangleTotalValue = 0.5 * rectangleFirstElement * rectangleSecondElement;
+    const rectangleTotalValue = rectangleFirstElement * rectangleSecondElement;
 // step 5
     // Display the total value in the final element
     const rectangleFinalValue = document.getElementById('rectangle-text-field');

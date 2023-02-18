@@ -11,7 +11,7 @@ document.getElementById('btn-calculate-rhombus').addEventListener('click', funct
     }
 
     // Calculate the total value
-    const rhombusTotalValue = rhombusFirstElement * rhombusSecondElement;
+    const rhombusTotalValue =  0.5 * rhombusFirstElement * rhombusSecondElement;
 
     // Display the total value in the final element
     const rhombusFinalValue = document.getElementById('rhombus-text-field');
