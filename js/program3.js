@@ -1,8 +1,7 @@
-
+// get event listener to the calculate button
 document.getElementById('btn-calculate-para').addEventListener('click', function () {
     const parallelogramFirstElement = getInputFieldValueById('input-field-para-first');
     const parallelogramSecondElement =  getInputFieldValueById('input-field-para-second');
-    
 
     
     // Check validation

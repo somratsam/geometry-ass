@@ -1,11 +1,8 @@
-
-
-
+// get event listener to the calculate button
 document.getElementById('btn-calculate-rhombus').addEventListener('click', function () {
     const rhombusFirstElement = getInputFieldValueById('input-field-rhombus-first');
     const rhombusSecondElement =  getInputFieldValueById('input-field-rhombus-second');
     
-
     
     // Check validation
     if (isNaN(rhombusFirstElement) || isNaN(rhombusSecondElement)) {

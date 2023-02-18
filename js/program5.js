@@ -1,5 +1,4 @@
-
-
+// get event listener to the calculate button
 document.getElementById('btn-calculate-penta').addEventListener('click', function () {
     const pentagonFirstElement = getInputFieldValueById('input-field-penta-first');
     const pentagonSecondElement =  getInputFieldValueById('input-field-penta-second');
