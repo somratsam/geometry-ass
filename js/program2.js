@@ -1,22 +1,28 @@
+
+// create a function for reuse code
+function getInputFieldValueById(inputFieldId) {
+    const inputElement = document.getElementById(inputFieldId);
+    const inputFieldValueString = inputElement.value;
+    inputFieldValue = parseFloat(inputFieldValueString);
+    inputElement.value = '';
+    return inputFieldValue
+}
+//   get event listener to the calculate button
 document.getElementById('btn-calculate-rect').addEventListener('click', function () {
+    // Get the values of the input fields
+    const rectangleFirstElement = getInputFieldValueById('input-field-rect-first');
+    const rectangleSecondElement = getInputFieldValueById('input-field-rect-second');
 
-    const rectangleFirstField = document.getElementById('input-field-rect-first');
-    const rectangleFirstElementString = rectangleFirstField.value;
-    const rectangleFirstElement = parseFloat(rectangleFirstElementString);
-    rectangleFirstField.value = '';
+    // Check validation
+    if (isNaN(rectangleFirstElement) || isNaN(rectangleSecondElement)) {
+        alert('Please enter valid numbers');
+        return;
+    }
 
-    const rectangleSecondField = document.getElementById('input-field-rect-second');
-    const rectangleSecondElementString = rectangleSecondField.value;
-    const rectangleSecondElement = parseFloat(rectangleSecondElementString);
-    rectangleSecondField.value = '';
+    // Calculate the total value
+    const rectangleTotalValue = 0.5 * rectangleFirstElement * rectangleSecondElement;
 
-    const rectangleTotalValue = rectangleFirstElement * rectangleSecondElement;
-
-
-    const rectangleFinalValue = document.getElementById('rectangle-text-field')
-    const rectangleFinalElementValueString = rectangleFinalValue.innerText;
-    const rectangleFinalElementValue = parseFloat(rectangleFinalElementValueString);
+    // Display the total value in the final element
+    const rectangleFinalValue = document.getElementById('rectangle-text-field');
     rectangleFinalValue.innerText = rectangleTotalValue;
-
-
-})
+});
